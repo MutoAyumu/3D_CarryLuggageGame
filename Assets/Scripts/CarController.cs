@@ -4,10 +4,31 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    [SerializeField] GameObject _player = default;
+    [SerializeField] float _rotateSpeed = 2;
     bool isOn;
+    [SerializeField] ButtonType _type;
+
+    enum ButtonType
+    {
+        Up,
+        Down
+    }
 
     private void FixedUpdate()
     {
+        if (isOn)
+        {
+            switch (_type)
+            {
+                case ButtonType.Down:
+                    _player.transform.Rotate(0f, 0f, -_rotateSpeed, Space.World);
+                    break;
+                case ButtonType.Up:
+                    _player.transform.Rotate(0f, 0f, _rotateSpeed, Space.World);
+                    break;
+            }
+        }
         if (isOn)
             Debug.Log("タッチされた");
     }
