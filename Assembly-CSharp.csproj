@@ -56,7 +56,9 @@
     <Compile Include="Assets\Packages\Low Poly Fruits\resources\fruits_tester.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
     <Compile Include="Assets\Scripts\CrateScript.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MoveController.cs" />
+    <Compile Include="Assets\Scripts\ScoreItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\MegaPack1Lite\SciFiPack1\README.txt" />
