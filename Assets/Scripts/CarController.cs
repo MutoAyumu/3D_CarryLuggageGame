@@ -8,7 +8,12 @@ public class CarController : MonoBehaviour
     [SerializeField] float _rotateSpeed = 2;
     bool isOn;
     [SerializeField] ButtonType _type;
+    MoveController _moveController = default;
 
+    private void Start()
+    {
+        _moveController = _player.GetComponent<MoveController>();
+    }
     enum ButtonType
     {
         Up,
@@ -17,7 +22,7 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isOn)
+        if (isOn && _moveController.IsAir)
         {
             switch (_type)
             {
