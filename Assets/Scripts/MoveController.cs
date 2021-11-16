@@ -22,11 +22,11 @@ public class MoveController : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("Crate"))
+        if (other.gameObject.CompareTag("Crate"))
         {
             other.gameObject.transform.parent = null;
         }
-        if(other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             IsAir = true;
         }
